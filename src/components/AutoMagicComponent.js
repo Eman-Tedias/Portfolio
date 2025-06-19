@@ -1,0 +1,101 @@
+// components/projetos/AutoMagicComplete.js
+import React from 'react';
+import { VideoPlayer } from '../components/VideoPlayer';
+import { getAutoMagicMainHeader, getAutoMagicDescriptionHeader, getAutoMagicDificuldadesHeader, getAutoMagicTecnologiasHeader } from '../components/projetos/AutoMagicContent';
+
+export const AutoMagicComplete = () => {
+  const autoMagicContent = getAutoMagicMainHeader();
+  const autoMagicDescription = getAutoMagicDescriptionHeader();
+  const autoMagicDesafios = getAutoMagicDificuldadesHeader();
+  const autoMagicTecnologias = getAutoMagicTecnologiasHeader();
+
+  return (
+    <div className="space-y-8">
+      {/* 1. Código do projeto */}
+      <div>
+        <pre className="text-sm leading-relaxed whitespace-pre-wrap">
+          <code className={`language-${autoMagicContent.language}`}>
+            {autoMagicContent.content}
+          </code>
+        </pre>
+      </div>
+      
+      {/* 3. Vídeo player */}
+      <div>
+        <VideoPlayer />
+      </div>
+
+      {/* 5. Informações adicionais */}
+      <div>
+        <pre className="text-sm leading-relaxed whitespace-pre-wrap">
+          <code className={`language-${autoMagicDescription.language}`}>
+            {autoMagicDescription.content}
+          </code>
+        </pre>
+        <br />
+        <div className='space-y-8 max-w-[50vw]'>
+          <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
+            A primeira versão do plugin já estava implementada, porém com uma interface e experiência do usuário bastante limitadas, o que resultava em uma adesão quase nula na utilização. A partir disso, assumi a responsabilidade por todas as melhorias e reestruturações da ferramenta, com suporte do time de Produto para a coleta de feedbacks e necessidades dos usuários e uma pessoa de UI Design para criar as interfaces.
+            Além da reformulação completa da interface e da experiência de uso, também foram desenvolvidos e incorporados novos recursos importantes, como:
+          </pre>
+          <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
+            • Alteração de propriedades de instâncias de componente;
+          </pre>
+          <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
+            • Tabela dinâmica com exibição dos dados e aplicação de filtros por colunas e valores;
+          </pre>
+          <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
+            • Reprocessamento de peças já desdobradas, com base em IDs únicos para controle preciso;
+          </pre>
+          <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
+            Essas melhorias em conjunto com uma documentação detalhada dos recursos e regras resultaram em um maior engajamento e eficiência no uso do plugin, que hoje é utilizado em todos novos trabalhos por maior parte do time de diretores de arte.
+            De setembro de 2024 até maio de 2025 o AutoMagic proporcionou uma<span className="text-yellow-400"> redução de 602,4 horas de trabalho, com um potencial de economia em folha de R$72.291,00</span>
+          </pre>
+        </div>
+      </div>
+
+      {/* 4. Tecnologias Utilizadas */}
+      <pre className="text-sm leading-relaxed whitespace-pre-wrap">
+        <code className={`language-${autoMagicTecnologias.language}`}>
+            {autoMagicTecnologias.content}
+        </code>
+      </pre>
+      <pre className="text-sm leading-relaxed whitespace-pre-wrap">
+        <code>
+            <span className="text-gray-800">const tecnologiasUtilizadas = {`{`}</span>
+            {'\n\n'}  <span className="text-white" style={{marginLeft: '30px'}}>Frontend: </span><span className="text-gray-800">'</span><span className="text-white">React</span><span className="text-gray-800">'</span><span className="text-gray-800">,</span>
+            {'\n'}  <span className="text-white" style={{marginLeft: '30px'}}>Backend: </span><span className="text-gray-800">'</span><span className="text-white">Node.js</span><span className="text-gray-800">'</span><span className="text-gray-800">,</span>
+            {'\n'}  <span className="text-white" style={{marginLeft: '30px'}}>Linguagem: </span><span className="text-gray-800">'</span><span className="text-white">TypeScript</span><span className="text-gray-800">'</span><span className="text-gray-800">,</span>
+            {'\n'}  <span className="text-white" style={{marginLeft: '30px'}}>Adicionais: </span><span className="text-gray-800">[</span><span className="text-gray-800">'</span><span className="text-white">Python Flask para rotas externas</span><span className="text-gray-800">'</span><span className="text-white">, </span><span className="text-gray-800">'</span><span className="text-white">MUI para componentes</span><span className="text-gray-800">'</span><span className="text-gray-800">]</span><span className="text-gray-800">,</span>
+            {'\n'}<span className="text-gray-800">{`}`}</span><span className="text-gray-800">;</span>
+        </code>
+      </pre>
+
+      <div>
+        <pre className="text-sm leading-relaxed whitespace-pre-wrap">
+          <code className={`language-${autoMagicDesafios.language}`}>
+            {autoMagicDesafios.content}
+          </code>
+        </pre>
+        <br />
+        <div className='space-y-8 max-w-[50vw]'>
+            <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
+            Meu principal desafio foi o fato de o plugin representar minha primeira experiência com React e TypeScript, especialmente dentro de uma aplicação de grande porte e já estruturada. Isso exigiu um esforço significativo para compreender simultaneamente a base de código, a linguagem e o framework.
+            <br />
+            <br />
+            Outro ponto desafiador foi a implementação da feature de desdobramento de peças animadas em HTML, que realizava uma requisição para uma rota externa responsável pelo processamento dos metadados do arquivo. O Figma, por questão de segurança, exige que todas as rotas externas utilizadas sejam declaradas previamente no manifest. Isso, no entanto, entrava em conflito com a funcionalidade de troca de imagens nas desdobras de peças estáticas, já que limitaríamos a escolha das imagens a domínios específicos, perdendo a flexibilidade de permitir que o usuário utilize qualquer imagem, de qualquer origem.
+            <br />
+            <br />
+            Como alternativa, propus a criação de uma rota intermediária em Python, que recebia a imagem enviada, armazenava no nosso bucket da GCS (Google Cloud Storage) e retornava um link público acessível pela aplicação. Dessa forma, foi necessário incluir apenas essa única rota no manifest, mantendo a liberdade de escolha para o usuário.
+            <br />
+            <br />
+            Também enfrentei limitações relacionadas à biblioteca DataGrid, que foi utilizada na interface, mas não oferecia flexibilidade suficiente para atender todas as demandas visuais e funcionais do projeto.
+            <br />
+            <br />
+            Por fim, a integração da funcionalidade de alteração de instâncias de componentes exigiu uma mudança estrutural no código. Anteriormente, o sistema mapeava todos os nós do arquivo Figma e trabalhava diretamente com seus IDs. No entanto, ao alterar propriedades de uma instância, os nós internos são perdidos, exigindo um novo mapeamento. Para resolver isso, implementei uma abordagem recursiva que percorria e atualizava todos os nós filhos que também fossem componentes, antes de realizar alterações em textos, imagens e demais propriedades.
+            </pre>
+        </div>
+      </div>
+    </div>
+  );
+};
