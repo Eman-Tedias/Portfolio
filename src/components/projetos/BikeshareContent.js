@@ -1,18 +1,18 @@
 import React from 'react';
-import { getChatbotHeader, getImageTransformerDesafiosHeader, getTecnologiasHeader } from "../HeadersContent"
+import { getBikeshareHeader, getImageTransformerDesafiosHeader, getTecnologiasHeader } from "../HeadersContent"
 
 const BikeshareContent = () => {
-  const chatbotContent = getChatbotHeader();
-  const chatbotDesafiosContent = getImageTransformerDesafiosHeader();
-  const chatbotTecnologiasHeader = getTecnologiasHeader();
+  const bikeshareContent = getBikeshareHeader();
+  const bikeshareDesafiosContent = getImageTransformerDesafiosHeader();
+  const bikeshareTecnologiasHeader = getTecnologiasHeader();
 
   return (
     <div className="space-y-8">
       <div>
         <pre className="text-sm leading-relaxed whitespace-pre-wrap">
           <span style={{ color: "#6A9955" }}>
-          <code className={`language-${chatbotContent?.language || ''}`}>
-            {chatbotContent?.content || ''}
+          <code className={`language-${bikeshareContent?.language || ''}`}>
+            {bikeshareContent?.content || ''}
           </code>
           </span>
         </pre>
@@ -50,9 +50,9 @@ const BikeshareContent = () => {
           </span>
       </div>
       <pre className="text-sm leading-relaxed whitespace-pre-wrap">
-          <code className={`language-${chatbotTecnologiasHeader?.language || ''}`}>
+          <code className={`language-${bikeshareTecnologiasHeader?.language || ''}`}>
             <span style={{ color: "#6A9955" }}>
-            {chatbotTecnologiasHeader?.content || ''}
+            {bikeshareTecnologiasHeader?.content || ''}
             </span>
           </code>
         </pre>
@@ -77,9 +77,9 @@ const BikeshareContent = () => {
 
       <div>
         <pre className="text-sm leading-relaxed whitespace-pre-wrap">
-          <code className={`language-${chatbotDesafiosContent?.language || ''}`}>
+          <code className={`language-${bikeshareDesafiosContent?.language || ''}`}>
             <span style={{ color: "#6A9955" }}>
-            {chatbotDesafiosContent?.content || ''}
+            {bikeshareDesafiosContent?.content || ''}
             </span>
           </code>
         </pre>

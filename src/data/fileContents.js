@@ -2,7 +2,7 @@
 // Importações dos conteúdos dos projetos
 import { AutoMagicContent } from '../components/projetos/AutoMagicContent';
 import SobreMim from '../components/SobreMim';
-import EstePortifolioContent from '../components/projetos/EstePortifolioContent';
+import EstePortfolioContent from '../components/projetos/EstePortfolioContent';
 import MovieRentalContent from '../components/projetos/MovieRental';
 import BikeshareContent from '../components/projetos/BikeshareContent';
 import Chatbot from '../components/projetos/ChatbotContent';
@@ -14,7 +14,7 @@ import RevisorIAContent from '../components/projetos/RevisorIAContent';
 export const getFileContent = (fileName) => {
   const contents = {
     // Arquivo principal sobre você
-    'SOBRE_MIM.md': {
+    'SOBRE-MIM.md': {
       content: <SobreMim />,
       language: 'markdown',
       type: 'component'
@@ -41,8 +41,8 @@ export const getFileContent = (fileName) => {
       language: 'python',
       type: 'component'
     },
-    'EstePortifolio.js': {
-      content: <EstePortifolioContent />,
+    'EstePortfolio.js': {
+      content: <EstePortfolioContent />,
       language: 'javascript',
       type: 'component'
     },

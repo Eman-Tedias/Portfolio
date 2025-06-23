@@ -1,18 +1,18 @@
 import React from 'react';
-import { getChatbotHeader, getImageTransformerDesafiosHeader, getTecnologiasHeader } from "../HeadersContent"
+import { getMovieRentalHeader, getImageTransformerDesafiosHeader, getTecnologiasHeader } from "../HeadersContent"
 
 const MovieRentalContent = () => {
-  const chatbotContent = getChatbotHeader();
-  const chatbotDesafiosContent = getImageTransformerDesafiosHeader();
-  const chatbotTecnologiasHeader = getTecnologiasHeader();
+  const movieRentalContent = getMovieRentalHeader();
+  const movieRentalDesafiosContent = getImageTransformerDesafiosHeader();
+  const movieRentalTecnologiasHeader = getTecnologiasHeader();
 
   return (
     <div className="space-y-8">
       <div>
         <pre className="text-sm leading-relaxed whitespace-pre-wrap">
           <span style={{ color: "#6A9955" }}>
-          <code className={`language-${chatbotContent?.language || ''}`}>
-            {chatbotContent?.content || ''}
+          <code className={`language-${movieRentalContent?.language || ''}`}>
+            {movieRentalContent?.content || ''}
           </code>
           </span>
         </pre>
@@ -46,18 +46,19 @@ const MovieRentalContent = () => {
           alt='Dashboard do Bikeshare'
           className="rounded-lg shadow-md max-w-full h-auto w-1/2"
         />
+        <div display="flex" flexDirection="row" justifyContent="space-between" className="mt-2">
         <span style={{ fontSize: '0.7rem' }}>
             Para acessar o dashboard, acesse o link: <a href="https://app.powerbi.com/view?r=eyJrIjoiODM0NzY3Y2YtZjJjMS00MmEwLTk5ZGUtOGI5NjQzMWEzYjU4IiwidCI6IjAxMGYyNTZiLWQ0ZGQtNGI0ZC1iZTEzLWIwNWZlM2VjYTk4NiJ9" target="_blank" rel="noopener noreferrer" style={{ color: "#569CD6", textDecoration: "underline" }}>Dashboard do Bikeshare</a>
         </span>
-        <br />
-        <span style={{ fontSize: '0.7rem' }}>
+        <span style={{ fontSize: '0.7rem', marginLeft: '2%' }}>
             Para visualizar os plots, acesse o Collab: <a href="https://colab.research.google.com/drive/1w9q7arMpzS65nwvxZv1XY9w3oNfS4f0f?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ color: "#569CD6", textDecoration: "underline" }}>Google Collab</a>
         </span>
+        </div>
       </div>
       <pre className="text-sm leading-relaxed whitespace-pre-wrap">
-          <code className={`language-${chatbotTecnologiasHeader?.language || ''}`}>
+          <code className={`language-${movieRentalTecnologiasHeader?.language || ''}`}>
             <span style={{ color: "#6A9955" }}>
-            {chatbotTecnologiasHeader?.content || ''}
+            {movieRentalTecnologiasHeader?.content || ''}
             </span>
           </code>
         </pre>
@@ -81,14 +82,13 @@ const MovieRentalContent = () => {
 
       <div>
         <pre className="text-sm leading-relaxed whitespace-pre-wrap">
-          <code className={`language-${chatbotDesafiosContent?.language || ''}`}>
+          <code className={`language-${movieRentalDesafiosContent?.language || ''}`}>
             <span style={{ color: "#6A9955" }}>
-            {chatbotDesafiosContent?.content || ''}
+            {movieRentalDesafiosContent?.content || ''}
             </span>
           </code>
         </pre>
       </div>
-      {/* Descrição do projeto */}
       <div className='space-y-8 max-w-[50vw]'>
           <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
             <code>

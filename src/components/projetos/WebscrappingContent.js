@@ -51,7 +51,7 @@ Meu papel foi criar toda a aplicação, a sua interface e realizar o deploy.<br 
       </div>
       <div className="mt-6">
         <img 
-          src="files/webscrapping_plot.png"
+          src="files/webscrapping_plot2.png"
           alt='Exemplo de interface do Webscrapping'
           className="rounded-lg shadow-md max-w-full h-auto w-1/2"
         />

@@ -17,7 +17,7 @@ imagens e outros elementos a partir de uma base de dados fornecida.
 };
 
 export const getPortifolioDescriptionHeader = () => {
-  return createHeader('PORTIFOLIO DEV', '=', 40);
+  return createHeader('PORTFOLIO DEV', '=', 40);
 };
 
 export const getAutoMagicDescriptionHeader = () => {
@@ -41,17 +41,28 @@ export const getMetodologiaHeader = () => {
 };
 
 export const getImageTransformerHeader = () => {
-  return createCommentHeader('Adeque Imagens', '#', 40);
+  return createCommentHeader('Transformador de Imagens', '#', 40);
 };
 
 export const getWebscrappingHeader = () => {
-  return createCommentHeader('Webscrapping', '#', 40);
+  return createCommentHeader('Escavador de Imagens', '#', 40);
 };
 
 export const getChatbotHeader = () => {
   return createCommentHeader('Chatbot IA', '#', 40);
 };
 
+export const getBikeshareHeader = () => {
+  return createCommentHeader('Bikeshare', '#', 40);
+};
+
+export const getMovieRentalHeader = () => {
+  return createCommentHeader('Movie Rental', '#', 40);
+};
+
+export const getVerificadorIAHeader = () => {
+  return createCommentHeader('Verificador IA', '#', 40);
+};
 
 export const getTecnologiasHeader = () => {
   return createCommentHeader('Tecnologias Utilizadas', '#', 40);

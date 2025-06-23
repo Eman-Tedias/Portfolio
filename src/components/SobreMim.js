@@ -7,7 +7,6 @@ const SobreMim = () => {
   return (
     <div className="space-y-8">
         <div className='space-y-8 max-w-[50vw]'>
-            <br />
             <pre className='text-5xl font-bold leading-relaxed whitespace-pre-wrap'>
                 ## EMANUEL
             </pre>
@@ -32,7 +31,7 @@ const SobreMim = () => {
                     Desde então, venho me especializando em ciência de dados e inteligência artificial, e sigo buscando maneiras de aplicar e aprofundar meus conhecimentos na prática.
                 </pre>
                 <img 
-                src="files/Adobe Summit.jpeg"
+                src="files/Adobe_Summit.jpeg"
                 alt='Exemplo de interface do Webscrapping'
                 className="rounded-lg shadow-md max-w-full h-auto w-1/2"
                 style={{marginLeft: '10%'}}

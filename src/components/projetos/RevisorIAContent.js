@@ -1,19 +1,19 @@
 import React from 'react';
-import { getWebscrappingHeader, getImageTransformerDesafiosHeader, getImageTransformerInterfaceHeader, getTecnologiasHeader } from "../HeadersContent"
+import { getVerificadorIAHeader, getImageTransformerDesafiosHeader, getImageTransformerInterfaceHeader, getTecnologiasHeader } from "../HeadersContent"
 
 const RevisorIAContent = () => {
-  const webscrappingContent = getWebscrappingHeader();
-  const webscrappingDesafiosContent = getImageTransformerDesafiosHeader();
-  const webscrappingInterfaceContent = getImageTransformerInterfaceHeader();
-  const getRevisorTecnologiasHeader = getTecnologiasHeader();
+  const verificadorIAContent = getVerificadorIAHeader();
+  const verificadorIADesafiosContent = getImageTransformerDesafiosHeader();
+  const verificadorIAInterfaceContent = getImageTransformerInterfaceHeader();
+  const verificadorIATecnologiasHeader = getTecnologiasHeader();
 
   return (
     <div className="space-y-8">
       <div>
         <pre className="text-sm leading-relaxed whitespace-pre-wrap">
           <span style={{ color: "#6A9955" }}>
-          <code className={`language-${webscrappingContent?.language || ''}`}>
-            {webscrappingContent?.content || ''}
+          <code className={`language-${verificadorIAContent?.language || ''}`}>
+            {verificadorIAContent?.content || ''}
           </code>
           </span>
         </pre>
@@ -31,9 +31,9 @@ const RevisorIAContent = () => {
       </div>
       <div>
         <pre className="text-sm leading-relaxed whitespace-pre-wrap">
-          <code className={`language-${webscrappingInterfaceContent?.language || ''}`}>
+          <code className={`language-${verificadorIAInterfaceContent?.language || ''}`}>
             <span style={{ color: "#6A9955" }}>
-            {webscrappingInterfaceContent?.content || ''}
+            {verificadorIAInterfaceContent?.content || ''}
             </span>
           </code>
         </pre>
@@ -71,9 +71,9 @@ Meu papel no time de desenvolvimento foi o de auxiliar na criação da lógica d
         </pre>
       </div>
       <pre className="text-sm leading-relaxed whitespace-pre-wrap">
-          <code className={`language-${getRevisorTecnologiasHeader?.language || ''}`}>
+          <code className={`language-${verificadorIATecnologiasHeader?.language || ''}`}>
             <span style={{ color: "#6A9955" }}>
-            {getRevisorTecnologiasHeader?.content || ''}
+            {verificadorIATecnologiasHeader?.content || ''}
             </span>
           </code>
         </pre>
@@ -95,9 +95,9 @@ Meu papel no time de desenvolvimento foi o de auxiliar na criação da lógica d
 
       <div>
         <pre className="text-sm leading-relaxed whitespace-pre-wrap">
-          <code className={`language-${webscrappingDesafiosContent?.language || ''}`}>
+          <code className={`language-${verificadorIADesafiosContent?.language || ''}`}>
             <span style={{ color: "#6A9955" }}>
-            {webscrappingDesafiosContent?.content || ''}
+            {verificadorIADesafiosContent?.content || ''}
             </span>
           </code>
         </pre>

@@ -11,9 +11,9 @@ import { getFileContent } from '../data/fileContents';
 
 const VSCodePortfolio = () => {
   const [openFolders, setOpenFolders] = useState(['src', 'projects']);
-  const [activeTab, setActiveTab] = useState('sobre-mim.md');
+  const [activeTab, setActiveTab] = useState('SOBRE-MIM.md');
   const [compSidebarCollapsed, setCompSidebarCollapsed] = useState(false);
-  const [activeView, setActiveView] = useState('welcome'); // 'welcome' ou 'explorer'
+  const [activeView, setActiveView] = useState('welcome');
 
   const toggleFolder = (folder) => {
     setOpenFolders(prev => 
