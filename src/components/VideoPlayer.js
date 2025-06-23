@@ -1,9 +1,9 @@
 import ReactPlayer from 'react-player'
 
-export function VideoPlayer() {
+export function VideoPlayer({ url }) {
   return (
     <ReactPlayer 
-      url="/files/AutoMagic.mp4"
+      url={url}
       controls={true}
       width="50%"
       height="auto"

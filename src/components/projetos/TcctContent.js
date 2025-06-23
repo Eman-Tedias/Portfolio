@@ -1,19 +1,19 @@
 import React from 'react';
-import { getWebscrappingHeader, getImageTransformerDesafiosHeader, getImageTransformerInterfaceHeader, getImageTransformerTecnologiasHeader } from "./AutoMagicContent"
+import { getTcctHeader, getImageTransformerDesafiosHeader, getMetodologiaHeader, getTecnologiasHeader } from "../HeadersContent"
 
 const TcctContent = () => {
-  const webscrappingContent = getWebscrappingHeader();
-  const webscrappingDesafiosContent = getImageTransformerDesafiosHeader();
-  const webscrappingInterfaceContent = getImageTransformerInterfaceHeader();
-  const webscrappingTecnologiasContent = getImageTransformerTecnologiasHeader();
+  const tcctHeader = getTcctHeader();
+  const tcctDesafiosContent = getImageTransformerDesafiosHeader();
+  const tcctMetodologiaContent = getMetodologiaHeader();
+  const tcctTecnologiasHeader = getTecnologiasHeader();
 
   return (
     <div className="space-y-8">
       <div>
         <pre className="text-sm leading-relaxed whitespace-pre-wrap">
           <span style={{ color: "#6A9955" }}>
-          <code className={`language-${webscrappingContent?.language || ''}`}>
-            {webscrappingContent?.content || ''}
+          <code className={`language-${tcctHeader?.language || ''}`}>
+            {tcctHeader?.content || ''}
           </code>
           </span>
         </pre>
@@ -22,56 +22,79 @@ const TcctContent = () => {
           <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
             <code>
               <span style={{ color: "#CE9178" }}>
-                """<br /><br />O Revisor IA é uma solução baseada em inteligência artificial desenvolvida para automatizar a verificação de ofertas em folhetos de supermercado. Integrado a uma ferramenta interna de visualização e marcação, ele permite, por meio de um botão, acionar o processamento automático das ofertas. As marcações são então realizadas diretamente em cada item, utilizando a API da ferramenta.<br /><br />"""
+                """<br /><br />O objetivo deste trabalho foi investigar como ferramentas de Inteligência Artificial (IA) e Processamento de Linguagem Natural (PLN) podem ser aplicadas na identificação de elementos estéticos e narrativos de nostalgia em filmes, tendo como objeto de estudo o longa-metragem Toy Story 3 (2010).
+                <br /><br />A motivação para utilizar IA surgiu durante a primeira etapa do projeto, quando enfrentei o desafio de analisar e cruzar em painel semântico mais de 60 elementos nostálgicos identificados na análise fílmica inicial. Diante da quantidade expressiva de dados, tornou-se necessário adotar uma abordagem metodológica que permitisse filtrar e selecionar uma amostra significativa desses elementos sem o viés de uma decisão inteiramente manual.
+                <br /><br />Aproveitando minha experiência na área de desenvolvimento, decidi propor uma solução baseada na análise de dados através de comentários de usuários, complementada por requisições à API da OpenAI, para refinar e revisar as amostras. Assim, o foco do trabalho tornou-se a integração entre a análise tradicional fílmica e a aplicação de técnicas automatizadas de IA/PLN.
+                <br /><br />Todos os processamentos foram feitos em um Jupyter Notebook.
+                <br /><br />"""
+              </span>
+            </code>
+        </pre>
+      </div>
+      <div className='space-y-8 max-w-[50vw]'>
+          <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
+            <code>
+              <span style={{ color: "#CE9178" }}>
+                <a href="https://github.com/Eman-Tedias/TCCT" target="_blank" rel="noopener noreferrer" style={{ color: "#569CD6", textDecoration: "underline" }}>
+                  Repositório do trabalho no GitHub
+                </a>
               </span>
             </code>
         </pre>
       </div>
       <div>
         <pre className="text-sm leading-relaxed whitespace-pre-wrap">
-          <code className={`language-${webscrappingInterfaceContent?.language || ''}`}>
+          <code className={`language-${tcctMetodologiaContent?.language || ''}`}>
             <span style={{ color: "#6A9955" }}>
-            {webscrappingInterfaceContent?.content || ''}
+            {tcctMetodologiaContent?.content || ''}
             </span>
           </code>
         </pre>
       </div>
-<br /><div className="mt-6">
-        <img 
-          src="files/pipeline_revisor.png"
-          alt='Pipeline do Revisor IA'
-          className="rounded-lg shadow-md max-w-full h-auto w-4/5"
-        />
-      </div>
+<br />
 <div className='space-y-8 max-w-[50vw]'>
           <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
             <code>
               <span style={{ color: "#CE9178" }}>
                 """
 <br /><br />
-• O fluxo é iniciado quando o usuário aciona um botão na interface da ferramenta. Nesse momento, as informações do folheto são enviadas para o backend.
+• Identificação de Cenas Nostálgicas no Filme:
+<br />  - Realização de análise fílmica manual.
+<br />  - Registro de cenas potencialmente nostálgicas com descrição e minutagem.
 <br /><br />
-• As informações do folheto, incluindo o arquivo PDF com a imagem do material, são obtidas por meio de uma API Gateway.
+• Análise do Roteiro do Filme:
+<br />  - Obtenção do roteiro via Scriptslug.
+<br />  - Divisão do roteiro em 12 partes, considerando contexto e tempo.
+<br />  - Envio de cada trecho à requisição do modelo GPT-4o da OpenAI para detectar elementos nostálgicos.
 <br /><br />
-• Utilizando a biblioteca fitz, são extraídas:
-<br />  • Imagens das ofertas contidas no PDF, que são salvas em uma pasta separada, juntamente com suas coordenadas dentro da página.
-<br />  • Dados textuais, também localizados no PDF, com as respectivas coordenadas de cada elemento textual.
+• Comparação entre Cenas e Roteiro:
+<br />  - Cruzamento entre os dados da análise fílmica e do roteiro processado pela IA.
+<br />  - Verificação de elementos adicionais não percebidos na análise manual.
 <br /><br />
-• Nos dados, cada item de oferta contém uma chave com a URL da imagem esperada. A imagem correspondente é buscada na pasta gerada a partir do PDF. Caso seja encontrada, a imagem da oferta é considerada correta.
+•  Agrupamento das informações textuais em cinco categorias temáticas através do ChatGPT:
+<br />  - Elementos Icônicos e Referências Pop
+<br />  - Infância, Crescimento e Despedida
+<br />  - Vida dos Brinquedos: Abandono e Emoção
+<br />  - Aventuras e Trabalho em Equipe
+<br />  - O Mundo dos Brinquedos: Cenários e Metáforas
 <br /><br />
-• A imagem da oferta recortada é enviada para uma IA, que realiza uma validação final. Isso garante a recuperação de dados que eventualmente não foram capturados durante o processamento inicial com a biblioteca fitz, especialmente informações que estejam presentes apenas visualmente.
+• Coleta de Comentários de Espectadores:
+<br />  - Extração de 890 comentários da base de dados IMDb via Kaggle.
 <br /><br />
-• Por fim, as coordenadas da imagem e o relatório de validação gerado pela IA são enviados à ferramenta de anotação. Lá, é feito um controle de qualidade visual, com um check verde (validação positiva) ou vermelho (validação negativa), conforme os dados sejam ou não validados corretamente pela IA.
+• Processamento dos Comentários:
+<br />  - Análise individual dos comentários através de requisição à OpenAI para identificar menções nostálgicas e retornar os respectivos números.
+<br />  - Geração de colunas temáticas em uma tabela final contendo o cruzamento de dados.
 <br /><br />
-Meu papel no time de desenvolvimento foi o de auxiliar na criação da lógica do processamento, estruturar o payload de recebimento e envio para a API da ferramenta, além de realizar testes com diferentes clientes.<br /><br />"""
+• Geração de Rankings de Cenas/Elementos Nostálgicos através de um código Python.
+<br /><br />"""
               </span>
             </code>
         </pre>
       </div>
       <pre className="text-sm leading-relaxed whitespace-pre-wrap">
-          <code className={`language-${webscrappingTecnologiasContent?.language || ''}`}>
+          <code className={`language-${tcctTecnologiasHeader?.language || ''}`}>
             <span style={{ color: "#6A9955" }}>
-            {webscrappingTecnologiasContent?.content || ''}
+            {tcctTecnologiasHeader?.content || ''}
             </span>
           </code>
         </pre>
@@ -79,13 +102,13 @@ Meu papel no time de desenvolvimento foi o de auxiliar na criação da lógica d
       <code>
         <span className="text-gray-800">tecnologias_utilizadas = {`{`}</span>
         {'\n\n'}  
-        <span className="text-white" style={{marginLeft: '30px'}}>'backend:'</span><span className="text-gray-800">'</span><span className="text-white">Python Flask</span><span className="text-gray-800">'</span><span className="text-gray-800">,</span>
+        <span className="text-white" style={{marginLeft: '30px'}}>'linguagem:'</span><span className="text-gray-800">'</span><span className="text-white">Python</span><span className="text-gray-800">'</span><span className="text-gray-800">,</span>
         {'\n'}  
-        <span className="text-white" style={{marginLeft: '30px'}}>'bibliotecas:'</span><span className="text-gray-800"> [</span>
-        <span className="text-gray-800">'</span><span className="text-white">OpenAI</span><span className="text-gray-800">'</span><span className="text-white">, </span>
-        <span className="text-gray-800">'</span><span className="text-white">Fitz</span><span className="text-gray-800">'</span><span className="text-white">, </span>
-        <span className="text-gray-800">'</span><span className="text-white">OpenCV</span><span className="text-gray-800">'</span><span className="text-white">, </span>
-        <span className="text-gray-800">'</span><span className="text-white">numpy</span><span className="text-gray-800">'</span><span className="text-gray-800">]</span>
+        <span className="text-white" style={{marginLeft: '30px'}}>'ferramentas:'</span><span className="text-gray-800"> [</span>
+        <span className="text-gray-800">'</span><span className="text-white">Jupyter Notebook</span><span className="text-gray-800">'</span><span className="text-white">, </span>
+        <span className="text-gray-800">'</span><span className="text-white">OpenAI API</span><span className="text-gray-800">'</span><span className="text-white">, </span>
+        <span className="text-gray-800">'</span><span className="text-white">Pandas</span><span className="text-gray-800">'</span><span className="text-white">, </span>
+        <span className="text-gray-800">'</span><span className="text-white">Google Docs</span><span className="text-gray-800">'</span><span className="text-gray-800">]</span>
         {'\n'}
         <span className="text-gray-800">{`}`}</span>
       </code>
@@ -93,9 +116,9 @@ Meu papel no time de desenvolvimento foi o de auxiliar na criação da lógica d
 
       <div>
         <pre className="text-sm leading-relaxed whitespace-pre-wrap">
-          <code className={`language-${webscrappingDesafiosContent?.language || ''}`}>
+          <code className={`language-${tcctDesafiosContent?.language || ''}`}>
             <span style={{ color: "#6A9955" }}>
-            {webscrappingDesafiosContent?.content || ''}
+            {tcctDesafiosContent?.content || ''}
             </span>
           </code>
         </pre>
@@ -105,9 +128,9 @@ Meu papel no time de desenvolvimento foi o de auxiliar na criação da lógica d
           <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
             <code>
               <span style={{ color: "#CE9178" }}>
-"""<br /><br />A maior dificuldade foi garantir a captura precisa das coordenadas de texto e localizar corretamente as imagens correspondentes na comparação com as imagens da pasta, considerando que poderiam existir pequenas variações entre elas.
-<br /><br />Além disso, a aplicação possui algumas regras de funcionamento para torná-la genérica, então o único desafio foi garantir a compreensão delas pelo usuário, tendo como auxilio a UI/UX.
-<br /><br />""
+"""<br /><br />Acredito que o maior desafio tenha sido apresentar o conceito para pessoas fora da área de tecnologia, como professores e colegas, através de uma linguagem acessível e menos técnica, para que pudessem compreender todas as etapas.
+<br /><br />Também foi desafiador construir um prompt eficiente, utilizando técnicas de engenharia de prompt, que conseguisse revisar os comentários de forma precisa e minimizar as alucinações do modelo, evitando assim custos desnecessários.
+<br /><br />"""
               </span>
             </code>
           </pre>

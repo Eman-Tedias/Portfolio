@@ -1,11 +1,11 @@
 import React from 'react';
-import { getWebscrappingHeader, getImageTransformerDesafiosHeader, getImageTransformerInterfaceHeader, getImageTransformerTecnologiasHeader } from "../projetos/AutoMagicContent"
+import { getWebscrappingHeader, getImageTransformerDesafiosHeader, getImageTransformerInterfaceHeader, getTecnologiasHeader } from "../HeadersContent"
 
 const WebscrappingContent = () => {
   const webscrappingContent = getWebscrappingHeader();
   const webscrappingDesafiosContent = getImageTransformerDesafiosHeader();
   const webscrappingInterfaceContent = getImageTransformerInterfaceHeader();
-  const webscrappingTecnologiasContent = getImageTransformerTecnologiasHeader();
+  const webscrappingTecnologiasContent = getTecnologiasHeader();
 
   return (
     <div className="space-y-8">
@@ -23,7 +23,7 @@ const WebscrappingContent = () => {
           <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
             <code>
               <span style={{ color: "#CE9178" }}>
-                """<br /><br />O "Webscrapping" é uma ferramenta desenvolvida na empresa Arizona Global para automatizar a busca por imagens a partir de links dinâmicos baseados em códigos variáveis, como SKUs. A interface permite ao usuário fazer o upload de um arquivo Excel contendo esses códigos ou inseri-los manualmente por meio de um campo de texto. A partir disso, o usuário fornece um link template que contém um marcador {}, indicando o ponto onde cada valor será inserido.
+                """<br /><br />O Escavador de Imagens é uma ferramenta desenvolvida para automatizar a busca por imagens a partir de links dinâmicos baseados em códigos variáveis, como IDs únicos de produtos. A interface permite ao usuário fazer o upload de um arquivo Excel contendo esses códigos ou inseri-los manualmente por meio de um campo de texto. A partir disso, o usuário fornece um link template que contém um marcador {}, indicando o ponto onde cada valor será inserido.
 <br /><br />
 • O usuário envia um arquivo Excel com os códigos ou os insere manualmente.
 <br /><br />
@@ -49,7 +49,6 @@ Meu papel foi criar toda a aplicação, a sua interface e realizar o deploy.<br 
           </code>
         </pre>
       </div>
-      {/* Imagem do matplotlib */}
       <div className="mt-6">
         <img 
           src="files/webscrapping_plot.png"

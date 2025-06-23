@@ -1,11 +1,11 @@
 import React from 'react';
-import { getImageTransformerHeader, getImageTransformerDesafiosHeader, getImageTransformerInterfaceHeader, getImageTransformerTecnologiasHeader } from "../projetos/AutoMagicContent"
+import { getImageTransformerHeader, getImageTransformerDesafiosHeader, getImageTransformerInterfaceHeader, getTecnologiasHeader } from "../HeadersContent"
 
 const ImageTransformerContent = () => {
   const imageTransformerContent = getImageTransformerHeader();
   const imageTransformerDesafiosContent = getImageTransformerDesafiosHeader();
   const imageTransformerInterfaceContent = getImageTransformerInterfaceHeader();
-  const imageTransformerTecnologiasContent = getImageTransformerTecnologiasHeader();
+  const imageTransformerTecnologiasContent = getTecnologiasHeader();
 
   return (
     <div className="space-y-8">
@@ -23,7 +23,8 @@ const ImageTransformerContent = () => {
           <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
             <code>
               <span style={{ color: "#CE9178" }}>
-                """<br /><br />O "Adeque Imagens" é uma ferramenta interna para transformação de imagens desenvolvida na empresa Arizona Global, permitindo o processamento de múltiplas simultaneamente. Foi criado para atender o nosso time de criação e atendimento.
+                """<br /><br />Transformador de imagens é uma ferramenta que permite alterar propriedades de imagens, permitindo o processamento simultâneo em lote.
+<br /><br />Features:
 <br /><br />
 Remover fundo: elimina o background da imagem utilizando a API do modelo RMBG-1.4 da BRIA AI.
 <br /><br />

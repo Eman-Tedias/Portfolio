@@ -1,9 +1,11 @@
 // fileContents.js
 // Importações dos conteúdos dos projetos
-import { getEmanContent } from '../components/projetos/EmanContent';
-import { AutoMagicComplete } from '../components/AutoMagicComponent';
-// import { getEstePortifolioContent } from '../components/projetos/EstePortifolioContent';
-// import { getNaturaAnalyticsContent } from '../components/projetos/NaturaAnalyticsContent';
+import { AutoMagicContent } from '../components/projetos/AutoMagicContent';
+import SobreMim from '../components/SobreMim';
+import EstePortifolioContent from '../components/projetos/EstePortifolioContent';
+import MovieRentalContent from '../components/projetos/MovieRental';
+import BikeshareContent from '../components/projetos/BikeshareContent';
+import Chatbot from '../components/projetos/ChatbotContent';
 import TcctContent from '../components/projetos/TcctContent';
 import ImageTransformerContent from '../components/projetos/ImageTransformerContent';
 import WebscrappingContent from '../components/projetos/WebscrappingContent';
@@ -12,22 +14,44 @@ import RevisorIAContent from '../components/projetos/RevisorIAContent';
 export const getFileContent = (fileName) => {
   const contents = {
     // Arquivo principal sobre você
-    'Eman.md': getEmanContent(),
+    'SOBRE_MIM.md': {
+      content: <SobreMim />,
+      language: 'markdown',
+      type: 'component'
+    },
 
     // Projetos
-    'AutoMagic.tsx': {
-      content: <AutoMagicComplete />,
+    'DesdobradorFigma.tsx': {
+      content: <AutoMagicContent />,
       language: 'typescript',
       type: 'component'
     },
-    'revisor_ia.py': {
+    'verificador_ia.py': {
       content: <RevisorIAContent />,
       language: 'python',
       type: 'component'
     },
-    // 'EstePortifolio.js': getEstePortifolioContent(),
-    // 'natura_analytics.py': getNaturaAnalyticsContent(),
-    'tcct_dev.ipynb': {
+    'bikeshare.py': {
+      content: <BikeshareContent />,
+      language: 'python',
+      type: 'component'
+    },
+    'movie_rental.ipynb': {
+      content: <MovieRentalContent />,
+      language: 'python',
+      type: 'component'
+    },
+    'EstePortifolio.js': {
+      content: <EstePortifolioContent />,
+      language: 'javascript',
+      type: 'component'
+    },
+    'chatbot_whatsapp.py': {
+      content: <Chatbot />,
+      language: 'python',
+      type: 'component'
+    },
+    'tcct_ia_pnl.ipynb': {
       content: <TcctContent />,
       language: 'python',
       type: 'component'

@@ -1,11 +1,11 @@
 import React from 'react';
-import { getWebscrappingHeader, getImageTransformerDesafiosHeader, getImageTransformerInterfaceHeader, getImageTransformerTecnologiasHeader } from "../projetos/AutoMagicContent"
+import { getWebscrappingHeader, getImageTransformerDesafiosHeader, getImageTransformerInterfaceHeader, getTecnologiasHeader } from "../HeadersContent"
 
 const RevisorIAContent = () => {
   const webscrappingContent = getWebscrappingHeader();
   const webscrappingDesafiosContent = getImageTransformerDesafiosHeader();
   const webscrappingInterfaceContent = getImageTransformerInterfaceHeader();
-  const webscrappingTecnologiasContent = getImageTransformerTecnologiasHeader();
+  const getRevisorTecnologiasHeader = getTecnologiasHeader();
 
   return (
     <div className="space-y-8">
@@ -22,7 +22,9 @@ const RevisorIAContent = () => {
           <pre className='text-sm leading-relaxed whitespace-pre-wrap'>
             <code>
               <span style={{ color: "#CE9178" }}>
-                """<br /><br />O Revisor IA é uma solução baseada em inteligência artificial desenvolvida para automatizar a verificação de ofertas em folhetos de supermercado. Integrado a uma ferramenta interna de visualização e marcação, ele permite, por meio de um botão, acionar o processamento automático das ofertas. As marcações são então realizadas diretamente em cada item, utilizando a API da ferramenta.<br /><br />"""
+                """<br /><br />O Verificador IA é uma solução baseada em inteligência artificial desenvolvida para automatizar a revisão de ofertas em folhetos de supermercado. Integrado a uma ferramenta interna de visualização e marcação, ele permite, por meio de um botão, acionar o processamento automático das ofertas. As marcações são então realizadas diretamente em cada item, utilizando a API da ferramenta.
+                <br /><br />O meu papel no projeto foi construir o backend, incluindo a lógica de processamento, o envio e recebimento de dados via API, além de realizar testes com diferentes clientes. A solução foi desenvolvida em Python, utilizando a biblioteca Fitz para extração de imagens e textos dos PDFs, e a API da OpenAI para validação final das ofertas.
+                <br /><br />"""
               </span>
             </code>
         </pre>
@@ -69,9 +71,9 @@ Meu papel no time de desenvolvimento foi o de auxiliar na criação da lógica d
         </pre>
       </div>
       <pre className="text-sm leading-relaxed whitespace-pre-wrap">
-          <code className={`language-${webscrappingTecnologiasContent?.language || ''}`}>
+          <code className={`language-${getRevisorTecnologiasHeader?.language || ''}`}>
             <span style={{ color: "#6A9955" }}>
-            {webscrappingTecnologiasContent?.content || ''}
+            {getRevisorTecnologiasHeader?.content || ''}
             </span>
           </code>
         </pre>
