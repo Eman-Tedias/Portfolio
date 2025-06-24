@@ -43,7 +43,7 @@ const MovieRentalContent = () => {
       <div className="mt-6">
         <img 
           src="files/movierental.png"
-          alt='Dashboard do Bikeshare'
+          alt='Dashboard do Aluguel de Filmes'
           className="rounded-lg shadow-md max-w-full h-auto w-1/2"
         />
         <div display="flex" flexDirection="row" justifyContent="space-between" className="mt-2">

@@ -6,7 +6,7 @@ const SobreMim = () => {
 
   return (
     <div className="space-y-8">
-        <div className='space-y-8 max-w-[50vw]'>
+        <div className='space-y-8 w-full px-8'> {/* Alterado de max-w-[50vw] para w-full px-8 */}
             <pre className='text-5xl font-bold leading-relaxed whitespace-pre-wrap'>
                 ## EMANUEL
             </pre>
@@ -14,7 +14,7 @@ const SobreMim = () => {
             <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                 <img 
                 src="files/Gramado.jpeg"
-                alt='Exemplo de interface do Webscrapping'
+                alt='Foto no Festival de Gramado'
                 className="rounded-lg shadow-md max-w-full h-auto w-1/3"
                 />
                 <pre className='text-sm leading-relaxed whitespace-pre-wrap' style={{marginLeft: '10%'}}>
@@ -32,7 +32,7 @@ const SobreMim = () => {
                 </pre>
                 <img 
                 src="files/Adobe_Summit.jpeg"
-                alt='Exemplo de interface do Webscrapping'
+                alt='Foto no Adobe Summit'
                 className="rounded-lg shadow-md max-w-full h-auto w-1/2"
                 style={{marginLeft: '10%'}}
                 />

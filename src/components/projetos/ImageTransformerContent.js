@@ -58,7 +58,7 @@ Além disso, também aperfeiçoei a interface do usuário, tentando não deixa-l
       <div className="mt-6">
         <img 
           src="/files/matplotlib_plot.png" 
-          alt="Exemplo de transformação de imagem usando matplotlib"
+          alt="Exemplo do transformador de imagens"
           className="rounded-lg shadow-md max-w-full h-auto w-1/2"
         />
           <span style={{ fontSize: '0.7rem' }}>
